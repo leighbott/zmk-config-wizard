@@ -17,15 +17,6 @@
         };
     };
 
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &td0
-            >;
-        };
-    };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -42,9 +33,9 @@
                 layer_1 {
 
                         bindings = <
-&kp UNDER  &kp N7 &kp N8 &kp N9 &td0                &trans     &kp LC(LG(LEFT)) &kp LG(UP) &kp LC(LG(RIGHT)) &trans
-&kp K_CALC &kp N4 &kp N5 &kp N6 &td1                &trans     &trans           &trans     &kp LG(LEFT)      &kp LG(DOWN)
-&tog 2     &kp N1 &kp N2 &kp N3 &kp KP_DOT          &trans     &trans           &trans     &trans            &trans 
+&kp UNDER  &kp N7 &kp N8 &kp N9 &td0                &kp K_VOL_UP &kp LC(LG(LEFT)) &kp LG(UP) &kp LC(LG(RIGHT)) &trans
+&kp K_CALC &kp N4 &kp N5 &kp N6 &td1                &kp K_VOL_DN &trans           &trans     &kp LG(LEFT)      &kp LG(DOWN)
+&tog 2     &kp N1 &kp N2 &kp N3 &kp KP_DOT          &kp K_MUTE   &kp K_PREV       &kp K_PP   &kp K_NEXT            &trans 
                          &kp N0 &kp BSPC    &trans &trans
                         >;
                 };
