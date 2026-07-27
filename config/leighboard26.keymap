@@ -107,9 +107,9 @@
 
                 layer_1 {
                         bindings = <
-&kp UNDER  &kp N7 &kp N8 &kp N9 &td0                &kp K_VOL_UP &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &trans
-&kp K_CALC &kp N4 &kp N5 &kp N6 &td1                &kp K_VOL_DN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans
-&tog 2     &kp N1 &kp N2 &kp N3 &kp KP_DOT          &kp K_MUTE   &kp K_PREV     &kp K_PP       &kp K_NEXT      &trans
+&kp UNDER      &kp N7 &kp N8 &kp N9 &td0                &kp K_VOL_UP &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &trans
+&kp K_CALC     &kp N4 &kp N5 &kp N6 &td1                &kp K_VOL_DN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans
+&studio_unlock &kp N1 &kp N2 &kp N3 &kp DOT             &kp K_MUTE   &kp K_PREV     &kp K_PP       &kp K_NEXT      &trans
                          &kp N0 &kp BSPC    &trans &trans
                         >;
                 };
