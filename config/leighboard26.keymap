@@ -17,11 +17,85 @@
         };
     };
 
+    macros {
+        leigh_b: leigh_b {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>; 
+            bindings
+                = <&kp L &kp E &kp I &kp G &kp H>
+                , <&kp DOT>
+                , <&kp B &kp O &kp T &kp T &kp E &kp C &kp H &kp I &kp A>
+                ;
+        };
+    };
+        combos {
+            compatible = "zmk,combos";
+                    combo_esc {
+                timeout-ms = <35>;
+                key-positions = <19 20>;
+                layers = <0 1>;
+                bindings = <&kp ESC>;
+            };
+                    combo_delete {
+                timeout-ms = <35>;
+                key-positions = <20 21>;
+                layers = <0 1>;
+                bindings = <&kp DEL>;
+            };
+                    combo_enter {
+                timeout-ms = <35>;
+                key-positions = <21 22>;
+                layers = <0 1>;
+                bindings = <&kp RET>;
+            };
+                    combo_win1 {
+                timeout-ms = <35>;
+                key-positions = <22 23>;
+                layers = <0 1>;
+                bindings = <&kp LGUI>;
+            };
+                    combo_win2 {
+                timeout-ms = <35>;
+                key-positions = <24 25>;
+                layers = <0 1>;
+                bindings = <&kp RGUI>;
+            };
+                    combo_alt1 {
+                timeout-ms = <35>;
+                key-positions = <3 4>;
+                layers = <0 1>;
+                bindings = <&kp LALT>;
+            };
+                    combo_alt2 {
+                timeout-ms = <35>;
+                key-positions = <5 6>;
+                layers = <0 1>;
+                bindings = <&kp RALT>;
+            };
+                    combo_nums {
+                timeout-ms = <35>;
+                key-positions = <19 20 21>;
+                layers = <0 1>;
+                bindings = <&tog 1>;
+            };
+                    combo_print {
+                timeout-ms = <35>;
+                key-positions = <20 22>;
+                layers = <0 1>;
+                bindings = <&tog 1>;
+            };
+                    combo_snip {
+                timeout-ms = <35>;
+                key-positions = <21 23>;
+                layers = <0 1>;
+                bindings = <&tog 1>;
+            };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
                 layer_0 {
-
                         bindings = <
 &kp Q       &kp W &kp F &kp P &kp G    &kp J &kp L &kp U     &kp Y   &kp SQT
 &lt 1 A     &kp R &kp S &kp T &kp D    &kp H &kp N &kp E     &kp I   &lt 3 O
@@ -31,11 +105,10 @@
                 };
 
                 layer_1 {
-
                         bindings = <
-&kp UNDER  &kp N7 &kp N8 &kp N9 &td0                &kp K_VOL_UP &kp LC(LG(LEFT)) &kp LG(UP) &kp LC(LG(RIGHT)) &trans
-&kp K_CALC &kp N4 &kp N5 &kp N6 &td1                &kp K_VOL_DN &trans           &trans     &kp LG(LEFT)      &kp LG(DOWN)
-&tog 2     &kp N1 &kp N2 &kp N3 &kp KP_DOT          &kp K_MUTE   &kp K_PREV       &kp K_PP   &kp K_NEXT            &trans 
+&kp UNDER  &kp N7 &kp N8 &kp N9 &td0                &kp K_VOL_UP &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &trans
+&kp K_CALC &kp N4 &kp N5 &kp N6 &td1                &kp K_VOL_DN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans
+&tog 2     &kp N1 &kp N2 &kp N3 &kp KP_DOT          &kp K_MUTE   &kp K_PREV     &kp K_PP       &kp K_NEXT      &trans
                          &kp N0 &kp BSPC    &trans &trans
                         >;
                 };
@@ -50,26 +123,21 @@
                 };
 
                 layer_3 {
-
                         bindings = <
-&kp LEFT          &kp DOWN        &kp UP    &kp RIGHT   &kp RA(F4)              &trans &trans &trans &trans &trans
-&kp LG(E)         &kp LS(LA(TAB)) &kp TAB   &kp LA(TAB) &trans    &trans        &trans &trans &trans &trans &trans
-&kp LS(LG(RIGHT)) &kp LC(LS(TAB)) &kp LC(W) &kp LC(TAB) &kp LC(Y) &trans        &trans &trans &trans &trans &trans
-                                                  &trans &trans &trans &trans              
+&kp LEFT  &kp DOWN        &kp UP      &kp RIGHT   &kp RA(F4)     &trans  &kp LG(UP)   &trans       &trans        &trans
+&trans    $kp LALT        &kp LS(TAB) &kp TAB     &kp LA(TAB)    &trans  &kp LG(LEFT) &kp LG(DOWN) &kp LG(RIGHT) &trans   
+&kp LG(E) &kp LC(LS(TAB)) &kp LC(W)   &kp LC(TAB) &kp LC(Y)      &kp INS &kp CAPS     &kp LNLCK    &kp LSLCK     &kp PSCRN
+                                                  &trans &trans &trans &trans
                         >;
                 };
 
                 layer_4 {
-
                         bindings = <
-&trans &trans  &trans   &kp PRCNT &kp GRAVE             &kp CAPS &kp CARET &kp BSLH &kp FSLH
-&kp AT &trans  &kp STAR &kp TILDE &kp DLLR              &kp HASH &kp AMPS &kp EXCL &kp LPAR &kp RPAR 
-&trans &kp INS &kp SLCK &kp LNLCK &trans                &trans &kp LS(LBKT) &kp LS(RBKT) &kp LBKT &kp RBKT 
+&kp EQUAL &trans    &kp FSLH  &kp PRCNT &kp GRAVE          &trans   &kp PLUS     &kp UNDER    &kp LBRC &kp RBRC
+&kp AT    &kp CARET &kp STAR  &kp TILDE &kp MINUS          &kp HASH &kp AMPS     &kp EXCL     &kp LPAR &kp RPAR
+&kp PIPE  &trans    &kp COLON &trans    &kp BSLH           &trans   &kp LS(LBKT) &kp LS(RBKT) &kp LBKT &kp RBKT
                          &trans &trans &trans &trans         
                         >;
-
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-
                 };
         };
 };
