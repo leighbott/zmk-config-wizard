@@ -126,7 +126,7 @@
                 layer_3 {
                         bindings = <
 &kp LEFT  &kp DOWN        &kp UP      &kp RIGHT   &kp RA(F4)     &trans  &kp LG(UP)   &trans       &trans        &trans
-&trans    $kp LALT        &kp LS(TAB) &kp TAB     &kp LA(TAB)    &trans  &kp LG(LEFT) &kp LG(DOWN) &kp LG(RIGHT) &trans   
+&trans    &kp LALT        &kp LS(TAB) &kp TAB     &kp LA(TAB)    &trans  &kp LG(LEFT) &kp LG(DOWN) &kp LG(RIGHT) &trans   
 &kp LG(E) &kp LC(LS(TAB)) &kp LC(W)   &kp LC(TAB) &kp LC(Y)      &kp INS &kp CAPS     &kp LNLCK    &kp LSLCK     &kp PSCRN
                                                   &trans &trans &trans &trans
                         >;
