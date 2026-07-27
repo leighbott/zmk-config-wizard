@@ -42,7 +42,7 @@ include:
   - board: seeeduino_xiao_ble
     shield: leighboard26_dongle
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
     artifact-name: leighboard26_dongle_with_studio
 
   - board: nice_nano_v2
