@@ -171,7 +171,7 @@
                         >;
                 };
 
-                extra_5_layer {
+                extra_6_layer {
                         bindings = <
 &kp Q       &kp W &kp F &kp P &kp G    &kp J &kp L &kp U     &kp Y   &kp SQT
 &lt 1 A     &kp R &kp S &kp T &kp D    &kp H &kp N &kp E     &kp I   &lt 3 O
