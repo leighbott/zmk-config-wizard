@@ -4,14 +4,14 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: badjeff
-      url-base: https://github.com/badjeff
+    - name: maurzo
+      url-base: https://github.com/maurzo
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
     - name: zmk-behavior-battery-percentage-printer
-      remote: badjeff
+      remote: maurzo
       revision: main
   self:
     path: config

@@ -120,9 +120,9 @@
 
                 base_0_layer {
                         bindings = <
-&bapp       &kp W &kp F &kp P &kp G    &kp J &kp L &kp U     &kp Y   &kp APOS
-&lt 1 A     &kp R &kp S &kp T &kp D    &kp H &kp N &kp E     &kp I   &lt 3 O
-&mt LSHFT Z &kp X &kp C &kp V &kp B    &kp K &kp M &kp COMMA &kp DOT &kp QMARK
+&bapp       &bapp_all  &bapp_periph &kp P &kp G    &kp J &kp L &kp U     &kp Y   &kp APOS
+&lt 1 A     &kp R      &kp S        &kp T &kp D    &kp H &kp N &kp E     &kp I   &lt 3 O
+&mt LSHFT Z &kp X      &kp C        &kp V &kp B    &kp K &kp M &kp COMMA &kp DOT &kp QMARK
                 &lt 3 SPACE &kp LCTRL       &kp RSHFT &lt 4 BSPC
                         >;
                 };
@@ -138,9 +138,9 @@
 
                 arrows_2_layer {
                         bindings = <
-&bapp  &kp F7 &kp F8 &kp F9 &kp F10                   &kp PG_UP &kp HOME      &kp UP   &kp END       &trans
-&trans &kp F4 &kp F5 &kp F6 &kp F11                   &kp PG_DN &kp LEFT      &kp DOWN &kp RIGHT     &trans
-&trans &kp F1 &kp F2 &kp F3 &kp F12                   &trans    &kp LC(PG_UP) &trans   &kp LC(PG_UP) &trans
+&bapp        &kp F7 &kp F8 &kp F9 &kp F10                   &kp PG_UP &kp HOME      &kp UP   &kp END       &trans
+&bapp_all    &kp F4 &kp F5 &kp F6 &kp F11                   &kp PG_DN &kp LEFT      &kp DOWN &kp RIGHT     &trans
+&bapp_periph &kp F1 &kp F2 &kp F3 &kp F12                   &trans    &kp LC(PG_UP) &trans   &kp LC(PG_UP) &trans
                         &mo 3 &trans                &trans &trans
                         >;
                 };
