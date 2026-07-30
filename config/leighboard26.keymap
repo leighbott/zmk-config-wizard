@@ -119,7 +119,7 @@
 
                 base_0_layer {
                         bindings = <
-&kp Q       &kp W &kp F &kp P &kp G    &kp J &kp L &kp U     &kp Y   &kp SQT
+&kp Q       &kp W &kp F &kp P &kp G    &kp J &kp L &kp U     &kp Y   &kp APOS
 &lt 1 A     &kp R &kp S &kp T &kp D    &kp H &kp N &kp E     &kp I   &lt 3 O
 &mt LSHFT Z &kp X &kp C &kp V &kp B    &kp K &kp M &kp COMMA &kp DOT &kp QMARK
                 &lt 3 SPACE &kp LCTRL       &kp RSHFT &lt 4 BSPC
@@ -155,10 +155,10 @@
 
                 symbols_4_layer {
                         bindings = <
-&kp EQUAL &trans    &kp FSLH  &kp PRCNT &kp GRAVE          &trans   &kp PLUS     &kp UNDER    &kp LBRC &kp RBRC
-&kp AT    &kp CARET &kp STAR  &kp TILDE &kp MINUS          &kp HASH &kp AMPS     &kp EXCL     &kp LPAR &kp RPAR
-&kp PIPE  &trans    &kp COLON &trans    &kp BSLH           &trans   &kp LS(LBKT) &kp LS(RBKT) &kp LBKT &kp RBKT
-                                   &trans &trans             &trans &trans         
+&kp EQUAL &trans    &kp FSLH  &kp PRCNT &kp GRAVE          &trans   &kp PLUS  &kp UNDER &kp LBRC &kp RBRC
+&kp AT    &kp CARET &kp STAR  &kp TILDE &kp MINUS          &kp HASH &kp AMPS  &kp EXCL  &kp LPAR &kp RPAR
+&kp PIPE  &trans    &kp COLON &trans    &kp BSLH           &kp SEMI &kp DLLR  &kp SQT   &kp LBKT &kp RBKT
+                                   &trans &trans             &trans &trans
                         >;
                 };
 
