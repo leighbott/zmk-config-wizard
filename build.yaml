@@ -43,7 +43,13 @@ include:
     shield: leighboard26_dongle
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-    #artifact-name: leighboard26_dongle
+    artifact-name: seed_dongle
+
+  - board: nice_nano
+    shield: leighboard26_dongle
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: clone_dongle
 
   - board: nice_nano
     shield: leighboard26_left
