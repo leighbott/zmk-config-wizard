@@ -123,7 +123,7 @@
 &bapp       &bapp_all  &bapp_periph &kp P &kp G    &kp J &kp L &kp U     &kp Y   &kp APOS
 &lt 1 A     &kp R      &kp S        &kp T &kp D    &kp H &kp N &kp E     &kp I   &lt 3 O
 &mt LSHFT Z &kp X      &kp C        &kp V &kp B    &kp K &kp M &kp COMMA &kp DOT &kp QMARK
-                &lt 3 SPACE &kp LCTRL       &kp RSHFT &lt 4 BSPC
+           &kp X     &lt 3 SPACE &kp LCTRL       &kp RSHFT &lt 4 BSPC &kp X
                         >;
                 };
 
@@ -132,7 +132,7 @@
 &kp UNDER  &kp N7 &kp N8 &kp N9 &td0                &kp K_VOL_UP &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &trans
 &kp K_CALC &kp N4 &kp N5 &kp N6 &td1                &kp K_VOL_DN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans
 &tog 1     &kp N1 &kp N2 &kp N3 &kp DOT             &kp K_MUTE   &kp K_PREV     &kp K_PP       &kp K_NEXT      &trans
-                    &lt 3 N0 &kp BSPC                &trans &trans
+                &trans    &lt 3 N0 &kp BSPC                &trans &trans &trans
                         >;
                 };
 
@@ -141,7 +141,7 @@
 &trans &kp F7 &kp F8 &kp F9 &kp F10                   &kp PG_UP &kp HOME      &kp UP   &kp END       &trans
 &trans &kp F4 &kp F5 &kp F6 &kp F11                   &kp PG_DN &kp LEFT      &kp DOWN &kp RIGHT     &trans
 &trans &kp F1 &kp F2 &kp F3 &kp F12                   &trans    &kp LC(PG_UP) &trans   &kp LC(PG_UP) &bapp_periph
-                        &mo 3 &trans                &trans &trans
+              &trans          &mo 3 &trans                &trans &trans &trans
                         >;
                 };
 
@@ -150,7 +150,7 @@
 &kp LEFT  &kp DOWN        &kp UP      &kp RIGHT   &kp RA(F4)     &trans  &kp LG(UP)   &trans       &trans        &trans
 &trans    &kp LALT        &kp LS(TAB) &kp TAB     &kp LA(TAB)    &trans  &kp LG(LEFT) &kp LG(DOWN) &kp LG(RIGHT) &trans   
 &kp LG(E) &kp LC(LS(TAB)) &kp LC(W)   &kp LC(TAB) &kp LC(Y)      &kp INS &kp CAPS     &kp LNLCK    &kp LSLCK     &kp PSCRN
-                                            &trans &trans        &trans &trans
+                                 &trans           &trans &trans        &trans &trans &trans
                         >;
                 };
 
@@ -159,7 +159,7 @@
 &kp EQUAL &trans    &kp FSLH  &kp PRCNT &kp GRAVE          &trans   &kp PLUS  &kp UNDER &kp LBRC &kp RBRC
 &kp AT    &kp CARET &kp STAR  &kp TILDE &kp MINUS          &kp HASH &kp AMPS  &kp EXCL  &kp LPAR &kp RPAR
 &kp PIPE  &trans    &kp COLON &trans    &kp BSLH           &kp SEMI &kp DLLR  &kp SQT   &kp LBKT &kp RBKT
-                                   &trans &trans             &trans &trans
+                                 &trans  &trans &trans             &trans &trans &trans
                         >;
                 };
 
@@ -168,7 +168,7 @@
 &kp Q       &kp W &kp F &kp P &kp G    &kp J &kp L &kp U     &kp Y   &kp SQT
 &lt 1 A     &kp R &kp S &kp T &kp D    &kp H &kp N &kp E     &kp I   &lt 3 O
 &mt LSHFT Z &kp X &kp C &kp V &kp B    &kp K &kp M &kp COMMA &kp DOT &kp QMARK
-                &lt 3 SPACE &kp LCTRL       &kp RSHFT &lt 4 BSPC
+          &trans      &lt 3 SPACE &kp LCTRL       &kp RSHFT &lt 4 BSPC &trans
                         >;
                 };
 
@@ -177,7 +177,7 @@
 &kp Q       &kp W &kp F &kp P &kp G    &kp J &kp L &kp U     &kp Y   &kp SQT
 &lt 1 A     &kp R &kp S &kp T &kp D    &kp H &kp N &kp E     &kp I   &lt 3 O
 &mt LSHFT Z &kp X &kp C &kp V &kp B    &kp K &kp M &kp COMMA &kp DOT &kp QMARK
-                &lt 3 SPACE &kp LCTRL       &kp RSHFT &lt 4 BSPC
+             &trans   &lt 3 SPACE &kp LCTRL       &kp RSHFT &lt 4 BSPC &trans
                         >;
                 };
         };
