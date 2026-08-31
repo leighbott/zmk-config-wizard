@@ -120,10 +120,10 @@
 
                 base_0_layer {
                         bindings = <
-&bapp       &bapp_all  &bapp_periph &kp P &kp G    &kp J &kp L &kp U     &kp Y   &kp APOS
-&lt 1 A     &kp R      &kp S        &kp T &kp D    &kp H &kp N &kp E     &kp I   &lt 3 O
-&mt LSHFT Z &kp X      &kp C        &kp V &kp B    &kp K &kp M &kp COMMA &kp DOT &kp QMARK
-           &kp X     &lt 3 SPACE &kp LCTRL       &kp RSHFT &lt 4 BSPC &kp X
+&kp Q       &kp W  &kp F &kp P &kp G    &kp J &kp L &kp U     &kp Y   &kp APOS
+&lt 1 A     &kp R  &kp S &kp T &kp D    &kp H &kp N &kp E     &kp I   &lt 3 O
+&mt LSHFT Z &kp X  &kp C &kp V &kp B    &kp K &kp M &kp COMMA &kp DOT &kp QMARK
+           &kp N1     &lt 3 SPACE &kp LCTRL       &kp RSHFT &lt 4 BSPC &kp N2
                         >;
                 };
 
@@ -156,9 +156,9 @@
 
                 symbols_4_layer {
                         bindings = <
-&kp EQUAL &trans    &kp FSLH  &kp PRCNT &kp GRAVE          &trans   &kp PLUS  &kp UNDER &kp LBRC &kp RBRC
-&kp AT    &kp CARET &kp STAR  &kp TILDE &kp MINUS          &kp HASH &kp AMPS  &kp EXCL  &kp LPAR &kp RPAR
-&kp PIPE  &trans    &kp COLON &trans    &kp BSLH           &kp SEMI &kp DLLR  &kp SQT   &kp LBKT &kp RBKT
+&kp EQUAL &bapp_periph &kp FSLH  &kp PRCNT &kp GRAVE          &trans   &kp PLUS  &kp UNDER &kp LBRC &kp RBRC
+&kp AT    &kp CARET    &kp STAR  &kp TILDE &kp MINUS          &kp HASH &kp AMPS  &kp EXCL  &kp LPAR &kp RPAR
+&kp PIPE  &trans       &kp COLON &trans    &kp BSLH           &kp SEMI &kp DLLR  &kp SQT   &kp LBKT &kp RBKT
                                  &trans  &trans &trans             &trans &trans &trans
                         >;
                 };
