@@ -16,38 +16,41 @@
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&kp FSLH>, <&kp STAR>, <&kp N0>;
         };
                 td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&kp MINUS>, <&kp PLUS>, <&kp N0>;
         };
     };
 
     macros {
-        leigh_b: leigh_b {
+        m_leigh_b: m_leigh_b {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>; 
             bindings
                 = <&kp L &kp E &kp I &kp G &kp H>
-                , <&kp DOT>
-                , <&kp B &kp O &kp T &kp T &kp E &kp C &kp H &kp I &kp A>
-                ;
+                  , <&kp DOT>
+                  , <&kp B &kp O &kp T &kp T &kp E &kp C &kp H &kp I &kp A>
+                  , <&kp AT>
+                  , <&kp R &kp I &kp O &kp T &kp I &kp N &kp T &kp O>
+                  , <&kp DOT>
+                  , <&kp C &kp O &kp M>;
         };
 
-        login: login {
+        m_login: m_login {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N6 &kp N0 &kp N0 &kp N6>;
+            bindings = <&kp N6 &kp N0 &kp N0 &kp N6 &kp N1 &kp N8>;
         };
 
-        bday: bday {
+        m_bday: m_bday {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N1 &kp N8 &kp N0 &kp N3>;
+            bindings = <&kp N1 &kp N8 &kp N0 &kp N3 &kp N9 &kp N4>;
         };
     };
     
@@ -105,13 +108,13 @@
                 timeout-ms = <35>;
                 key-positions = <20 22>;
                 layers = <0 1>;
-                bindings = <&tog 1>;
+                bindings = <&kp PSCRN>;
             };
                     combo_snip {
                 timeout-ms = <35>;
                 key-positions = <21 23>;
                 layers = <0 1>;
-                bindings = <&tog 1>;
+                bindings = <&kp LS(LG(S))>;
             };
         };
 
@@ -123,15 +126,15 @@
 &kp Q       &kp W  &kp F &kp P &kp G    &kp J &kp L &kp U     &kp Y   &kp APOS
 &lt 1 A     &kp R  &kp S &kp T &kp D    &kp H &kp N &kp E     &kp I   &lt 2 O
 &mt LSHFT Z &kp X  &kp C &kp V &kp B    &kp K &kp M &kp COMMA &kp DOT &kp QMARK
-           &kp N1     &lt 3 SPACE &kp LCTRL       &kp RSHFT &lt 4 BSPC &kp N2
+           &kp N1     &lt 3 SPACE &kp LCTRL       &kp RSHFT &lt 4 BSPC &kp LG(L)
                         >;
                 };
 
                 numbers_1_layer {
                         bindings = <
-&kp UNDER  &kp N7 &kp N8 &kp N9 &td0                &kp K_VOL_UP &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &trans
-&kp K_CALC &kp N4 &kp N5 &kp N6 &td1                &kp K_VOL_DN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans
-&tog 1     &kp N1 &kp N2 &kp N3 &kp DOT             &kp K_MUTE   &kp K_PREV     &kp K_PP       &kp K_NEXT      &trans
+&kp UNDER  &kp N7 &kp N8 &kp N9 &td0                &kp C_VOL_UP &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &trans
+&kp K_CALC &kp N4 &kp N5 &kp N6 &td1                &kp C_VOL_DN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans
+&tog 1     &kp N1 &kp N2 &kp N3 &kp DOT             &kp C_MUTE   &kp C_PREV     &kp C_PP       &kp C_NEXT      &trans
                 &trans    &lt 3 N0 &kp BSPC                &trans &trans &trans
                         >;
                 };
@@ -140,7 +143,7 @@
                         bindings = <
 &trans &kp F7 &kp F8 &kp F9 &kp F10                   &kp PG_UP &kp HOME      &kp UP   &kp END       &trans
 &trans &kp F4 &kp F5 &kp F6 &kp F11                   &kp PG_DN &kp LEFT      &kp DOWN &kp RIGHT     &trans
-&trans &kp F1 &kp F2 &kp F3 &kp F12                   &trans    &kp LC(PG_UP) &trans   &kp LC(PG_UP) &bapp_periph
+&trans &kp F1 &kp F2 &kp F3 &kp F12                   &trans    &kp LC(PG_UP) &trans   &kp LC(PG_UP) &trans
               &trans          &mo 3 &trans                &trans &trans &trans
                         >;
                 };
@@ -156,29 +159,30 @@
 
                 symbols_4_layer {
                         bindings = <
-&kp EQUAL &bapp_periph &kp FSLH  &kp PRCNT &kp GRAVE          &trans   &kp PLUS  &kp UNDER &kp LBRC &kp RBRC
-&kp AT    &kp CARET    &kp STAR  &kp TILDE &kp MINUS          &kp HASH &kp AMPS  &kp EXCL  &kp LPAR &kp RPAR
-&kp PIPE  &trans       &kp COLON &trans    &kp BSLH           &kp SEMI &kp DLLR  &kp SQT   &kp LBKT &kp RBKT
+&kp EQUAL &bapp_periph &kp FSLH  &kp PRCNT &kp GRAVE          &bapp_periph &kp PLUS  &kp UNDER &kp LBRC &kp RBRC
+&kp AT    &kp CARET    &kp STAR  &kp TILDE &kp MINUS          &kp HASH     &kp AMPS  &kp EXCL  &kp LPAR &kp RPAR
+&kp PIPE  &trans       &kp COLON &trans    &kp BSLH           &kp SEMI     &kp DLLR  &kp SQT   &kp LBKT &kp RBKT
                                  &trans  &trans &trans             &trans &trans &trans
                         >;
                 };
 
-                extra_5_layer {
-                        bindings = <
-&kp Q       &kp W &kp F &kp P &kp G    &kp J &kp L &kp U     &kp Y   &kp SQT
-&lt 1 A     &kp R &kp S &kp T &kp D    &kp H &kp N &kp E     &kp I   &lt 3 O
-&mt LSHFT Z &kp X &kp C &kp V &kp B    &kp K &kp M &kp COMMA &kp DOT &kp QMARK
-          &trans      &lt 3 SPACE &kp LCTRL       &kp RSHFT &lt 4 BSPC &trans
-                        >;
-                };
+            extra_5_layer {
+                bindings = <
+&trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+       &trans &trans &trans           &trans &trans &trans
+    >;
+};
 
-                extra_6_layer {
-                        bindings = <
-&kp Q       &kp W &kp F &kp P &kp G    &kp J &kp L &kp U     &kp Y   &kp SQT
-&lt 1 A     &kp R &kp S &kp T &kp D    &kp H &kp N &kp E     &kp I   &lt 3 O
-&mt LSHFT Z &kp X &kp C &kp V &kp B    &kp K &kp M &kp COMMA &kp DOT &kp QMARK
-             &trans   &lt 3 SPACE &kp LCTRL       &kp RSHFT &lt 4 BSPC &trans
-                        >;
-                };
+            extra_6_layer {
+                bindings = <
+&trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+       &trans &trans &trans           &trans &trans &trans
+    >;
+};
+
         };
 };
