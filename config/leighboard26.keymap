@@ -16,13 +16,13 @@
         td0: td_slash_star {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <400>;
             bindings = <&kp FSLH>, <&kp STAR>;
         };
                 td1: td_minus_plus {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <400>;
             bindings = <&kp MINUS>, <&kp PLUS>;
         };
     };
